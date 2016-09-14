@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:app="http://schemas.android.com/apk/res-auto"
+               xmlns:tools="http://schemas.android.com/tools"
+               app:transitionOrdering="together"
+               tools:targetApi="kitkat">
+  <changeBounds />
+  <transition class="com.sample.transitionsample.transitionseverywhere.TransitionsEverywhereChangeColor" app:duration="200" app:interpolator="@android:interpolator/accelerate_cubic">
+    <targets>
+      <target app:targetId="@id/go_button_container" />
+      <target app:targetId="@id/first_line_of_text" />
+    </targets>
+  </transition>
+  <fade app:fadingMode="fade_in" >
+    <targets>
+      <target app:targetId="@id/content_above" />
+    </targets>
+  </fade>
+  <slide app:slideEdge="bottom"
+         tools:targetApi="lollipop">
+    <targets>
+      <target app:targetId="@id/ad_banner_container" />
+    </targets>
+  </slide>
+</transitionSet>

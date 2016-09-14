@@ -34,7 +34,7 @@ public class TransitionsEverywhereActivity extends AppCompatActivity {
         mFinalScene = Scene.getSceneForLayout(mSceneRoot, R.layout.scene_2, this);
 
         mTransitionToScene2 = TransitionInflater.from(this)
-                .inflateTransitionManager(R.transition.transitions_everywhere_transition_manager, mSceneRoot);
+                .inflateTransitionManager(R.anim.transitions_everywhere_transition_manager, mSceneRoot);
     }
 
     public void goBack(View view) {
