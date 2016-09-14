@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.sample.transitionsample.MainActivity">
+  <LinearLayout
+      android:id="@+id/content_above"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_alignParentTop="true"
+      android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/holo_red_light"
+        android:text="Line of Text Above" />
+  </LinearLayout>
+  <RelativeLayout
+      android:background="@android:color/holo_red_dark"
+      android:layout_marginTop="20dp"
+      android:id="@+id/go_button_container"
+      android:clipChildren="false"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@id/content_above"
+      android:layout_width="200dp"
+      android:layout_height="200dp">
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/go_button"
+        android:text="GO"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:onClick="goBack"/>
+  </RelativeLayout>
+  <LinearLayout
+      android:layout_above="@+id/ad_banner_container"
+      android:id="@+id/content_below"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+    <TextView
+        android:id="@+id/first_line_of_text"
+        android:background="@android:color/holo_purple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="This is a Line of Text" />
+    <TextView
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Another Line of Text" />
+    <TextView
+        android:background="@android:color/holo_green_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Last Line of Text" />
+  </LinearLayout>
+  <FrameLayout
+      android:background="@android:color/holo_green_dark"
+      android:id="@id/ad_banner_container"
+      android:layout_alignParentBottom="true"
+      android:layout_width="match_parent"
+      android:layout_height="50dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:text="I JUST SHOWED UP!" />
+  </FrameLayout>
+</RelativeLayout>
